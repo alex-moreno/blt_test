@@ -10,12 +10,14 @@ project:
 git:
   default_branch: master
   remotes:
-    - "alexmorenotest@svn-6634.devcloud.hosting.acquia.com:alexmorenotest.git"
+    - 'alexmorenotest@svn-6634.devcloud.hosting.acquia.com:alexmorenotest.git'
 drush:
   aliases:
-    remote: '${project.machine_name}.test'
+    remote: alexmorenotest.test
     local: self
     ci: self
+    test: alexmorenotest.test
+    dev: alexmorenotest.dev
   default_alias: '${drush.aliases.local}'
 modules:
   local:
