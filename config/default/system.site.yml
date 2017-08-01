@@ -1,0 +1,14 @@
+uuid: f895c302-9a67-4211-8426-931298543057
+name: 'Alejandro Moreno-Lopez'
+mail: alejandro.moreno@tdo.es
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
