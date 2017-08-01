@@ -1,0 +1,32 @@
+uuid: d7ad9e16-daa7-4915-aa11-b0d3e40eb47e
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_solr
+id: solr
+name: solr
+description: 'solr engine'
+backend: search_api_solr
+backend_config:
+  connector: standard
+  connector_config:
+    scheme: http
+    host: localhost
+    port: '8983'
+    path: /solr
+    core: d8
+    timeout: 5
+    index_timeout: 5
+    optimize_timeout: 10
+    commit_within: 1000
+    solr_version: ''
+    http_method: AUTO
+  retrieve_data: false
+  highlight_data: false
+  excerpt: false
+  skip_schema_check: false
+  site_hash: false
+  suggest_suffix: true
+  suggest_corrections: true
+  suggest_words: false

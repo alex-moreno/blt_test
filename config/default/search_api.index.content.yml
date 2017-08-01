@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - search_api.server.database
+    - search_api.server.solr
     - core.entity_view_mode.node.full
   module:
     - search_api
@@ -64,16 +64,36 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
-  rendered_item: {  }
+  add_url: {  }
   aggregated_field: {  }
-  transliteration:
+  content_access:
+    weights:
+      preprocess_query: -10
+  html_filter:
+    fields:
+      - rendered
+      - label
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+    weights:
+      preprocess_index: -10
+      preprocess_query: -9
+    all_fields: false
+  ignorecase:
     fields:
       - rendered
       - label
     weights:
-      preprocess_index: -4
-      preprocess_query: -3
+      preprocess_index: -9
+      preprocess_query: -8
     all_fields: false
+  rendered_item: {  }
   stopwords:
     fields:
       - rendered
@@ -129,37 +149,17 @@ processor_settings:
       preprocess_index: -6
       preprocess_query: -5
     all_fields: false
-  add_url: {  }
-  content_access:
-    weights:
-      preprocess_query: -10
-  html_filter:
-    fields:
-      - rendered
-      - label
-    title: true
-    alt: true
-    tags:
-      h1: 5
-      h2: 3
-      h3: 2
-      strong: 2
-      b: 2
-    weights:
-      preprocess_index: -10
-      preprocess_query: -9
-    all_fields: false
-  ignorecase:
+  transliteration:
     fields:
       - rendered
       - label
     weights:
-      preprocess_index: -9
-      preprocess_query: -8
+      preprocess_index: -4
+      preprocess_query: -3
     all_fields: false
 tracker_settings:
   default: {  }
 options:
   index_directly: true
   cron_limit: 50
-server: database
+server: solr
