@@ -19,6 +19,7 @@ deployed_tag="$4"
 repo_url="$5"
 repo_type="$6"
 
+  drush $site.$target_env config-export
 
   . /var/www/html/$site.$target_env/vendor/acquia/blt/scripts/cloud-hooks/functions.sh
   deploy_updates

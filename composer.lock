@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "baade6673d34eef1f28a9effe06e49c9",
+    "content-hash": "42bed6b5b178b6c05b99e5a8936469ba",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3340,7 +3340,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.2.zip",
-                "reference": null,
+                "reference": "8.x-1.2",
                 "shasum": "f64745456579bb0ff8139a38d8d5de673868d94c"
             },
             "require": {
@@ -3884,7 +3884,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/search_api_solr-8.x-1.0.zip",
-                "reference": null,
+                "reference": "8.x-1.0",
                 "shasum": "2559a2d54867632b2b0fac12e634da3eb820993d"
             },
             "require": {
