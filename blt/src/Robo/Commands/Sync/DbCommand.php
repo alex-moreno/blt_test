@@ -55,19 +55,20 @@ class DbCommand extends BltTasks {
    */
   public function syncDbDefault() {
     $this->invokeCommand('setup:settings');
+echo 'test:::: ' ;
 
     $local_alias = '@' . $this->getConfigValue('drush.aliases.local');
     $remote_alias = '@' . $this->getConfigValue('drush.aliases.remote');
 
     $task = $this->taskDrush()
-      ->alias('')
       ->drush('cache-clear drush')
       ->drush('sql-drop')
       ->drush('sql-sync')
       ->arg($remote_alias)
       ->arg($local_alias)
       ->option('structure-tables-key', 'lightweight')
-      ->option('create-db');
+      ->option('create-db')
+      ->assume(TRUE);
 
     if ($this->getConfigValue('drush.sanitize')) {
       $task->option('sanitize');
