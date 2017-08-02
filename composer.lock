@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "42bed6b5b178b6c05b99e5a8936469ba",
+    "content-hash": "aeadd60359923a8bf18f47e9ce7c6ad4",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1860,6 +1860,71 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/config_update"
             }
+        },
+        {
+            "name": "drupal/console",
+            "version": "0.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hechoendrupal/drupal-console.git",
+                "reference": "e9fb610d00cf1bd1cbe2b9de38b52b06da4cf252"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hechoendrupal/drupal-console/zipball/e9fb610d00cf1bd1cbe2b9de38b52b06da4cf252",
+                "reference": "e9fb610d00cf1bd1cbe2b9de38b52b06da4cf252",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.2",
+                "symfony/console": "~2.4",
+                "symfony/dependency-injection": "~2.4",
+                "symfony/finder": "~2.4",
+                "twig/twig": "~1.15"
+            },
+            "require-dev": {
+                "drupal/drupal": "8.x-dev@dev",
+                "phpunit/phpunit": "4.1.*",
+                "symfony/config": "~2.4",
+                "symfony/http-kernel": "~2.4"
+            },
+            "bin": [
+                "bin/console"
+            ],
+            "type": "drupal-module",
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\AppConsole\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Flores",
+                    "email": "dmousex@gmail.com",
+                    "homepage": "http://dmouse.net"
+                },
+                {
+                    "name": "Jesus Manuel Olivas",
+                    "email": "jesus.olivas@gmail.com",
+                    "homepage": "http://jmolivas.com"
+                },
+                {
+                    "name": "Drupal Console Contributors",
+                    "homepage": "https://github.com/hechoendrupal/DrupalAppConsole/graphs/contributors"
+                }
+            ],
+            "description": "Drupal 8 Console scaffolding module generator",
+            "keywords": [
+                "console",
+                "development",
+                "drupal"
+            ],
+            "time": "2014-07-04T21:22:29+00:00"
         },
         {
             "name": "drupal/contact_storage",
@@ -4750,22 +4815,21 @@
         },
         {
             "name": "grasmash/yaml-expander",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/grasmash/yaml-expander.git",
-                "reference": "95f9c876ca31f31bf5bfd9c8e89cc1f065c45528"
+                "reference": "720c54b2c99b80d5d696714b6826183d34edce93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/grasmash/yaml-expander/zipball/95f9c876ca31f31bf5bfd9c8e89cc1f065c45528",
-                "reference": "95f9c876ca31f31bf5bfd9c8e89cc1f065c45528",
+                "url": "https://api.github.com/repos/grasmash/yaml-expander/zipball/720c54b2c99b80d5d696714b6826183d34edce93",
+                "reference": "720c54b2c99b80d5d696714b6826183d34edce93",
                 "shasum": ""
             },
             "require": {
                 "dflydev/dot-access-data": "^1.1.0",
                 "php": ">=5.4",
-                "symfony/console": "^2.8.11|^3",
                 "symfony/yaml": "^2.8.11|^3"
             },
             "require-dev": {
@@ -4794,7 +4858,7 @@
                 }
             ],
             "description": "Expands internal property references in a yaml file.",
-            "time": "2017-03-24T20:31:04+00:00"
+            "time": "2017-08-01T16:15:05+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -10056,7 +10120,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/facets": 15
+        "drupal/facets": 15,
+        "drupal/console": 0
     },
     "prefer-stable": true,
     "prefer-lowest": false,

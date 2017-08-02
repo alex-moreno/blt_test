@@ -1,0 +1,14 @@
+uuid: 6977a8c0-a13b-40b5-abe8-80e10c9cdad3
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: dev
+folder: ../config/dev
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

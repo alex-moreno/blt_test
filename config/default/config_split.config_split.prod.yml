@@ -1,0 +1,19 @@
+uuid: ab816c7c-3f85-4014-b034-9674afb1b8a7
+langcode: en
+status: true
+dependencies: {  }
+id: prod
+label: prod
+folder: ../config/prod
+module:
+  devel: 0
+theme: {  }
+blacklist:
+  - devel.settings
+  - devel.toolbar.settings
+graylist:
+  - devel.settings
+  - devel.toolbar.settings
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
